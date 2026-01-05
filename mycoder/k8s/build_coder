@@ -1,0 +1,31 @@
+#!/bin/bash
+
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+
+
+kubectl create namespace coder
+# Install PostgreSQL
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install postgresql bitnami/postgresql \
+    --namespace coder \
+    --set image.repository=bitnamilegacy/postgresql \
+    --set auth.username=coder \
+    --set auth.password=coder \
+    --set auth.database=coder \
+    --set primary.persistence.size=10Gi
+
+
+# create secret:
+kubectl create secret generic coder-db-url -n coder --from-literal=url="postgres://coder:coder@postgresql.coder.svc.cluster.local:5432/coder?sslmode=disable"
+
+# adapting value.yaml
+
+# deployment
+helm install coder coder-v2/coder \
+    --namespace coder \
+    --values values.yaml \
+    --version 2.29.1
+
+
+kubectl get svc -n coder
+

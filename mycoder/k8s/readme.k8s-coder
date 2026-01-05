@@ -1,0 +1,97 @@
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-4
+chmod 700 get_helm.sh
+./get_helm.sh
+
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+
+
+# https://coder.com/docs/install/kubernetes
+
+kubectl create namespace coder
+# Install PostgreSQL
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install postgresql bitnami/postgresql \
+    --namespace coder \
+    --set image.repository=bitnamilegacy/postgresql \
+    --set auth.username=coder \
+    --set auth.password=coder \
+    --set auth.database=coder \
+    --set primary.persistence.size=10Gi
+
+NAME: postgresql
+LAST DEPLOYED: Mon Jan  5 12:28:13 2026
+NAMESPACE: coder
+STATUS: deployed
+REVISION: 1
+DESCRIPTION: Install complete
+TEST SUITE: None
+NOTES:
+CHART NAME: postgresql
+CHART VERSION: 18.2.0
+APP VERSION: 18.1.0
+
+⚠ WARNING: Since August 28th, 2025, only a limited subset of images/charts are available for free.
+    Subscribe to Bitnami Secure Images to receive continued support and security updates.
+    More info at https://bitnami.com and https://github.com/bitnami/containers/issues/83267
+
+** Please be patient while the chart is being deployed **
+
+PostgreSQL can be accessed via port 5432 on the following DNS names from within your cluster:
+
+    postgresql.coder.svc.cluster.local - Read/Write connection
+
+To get the password for "postgres" run:
+
+    export POSTGRES_ADMIN_PASSWORD=$(kubectl get secret --namespace coder postgresql -o jsonpath="{.data.postgres-password}" | base64 -d)
+
+To get the password for "coder" run:
+
+    export POSTGRES_PASSWORD=$(kubectl get secret --namespace coder postgresql -o jsonpath="{.data.password}" | base64 -d)
+
+To connect to your database run the following command:
+
+    kubectl run postgresql-client --rm --tty -i --restart='Never' --namespace coder --image registry-1.docker.io/bitnamilegacy/postgresql:latest --env="PGPASSWORD=$POSTGRES_PASSWORD" \
+      --command -- psql --host postgresql -U coder -d coder -p 5432
+
+    > NOTE: If you access the container using bash, make sure that you execute "/opt/bitnami/scripts/postgresql/entrypoint.sh /bin/bash" in order to avoid the error "psql: local user with ID 1001} does not exist"
+
+To connect to your database from outside the cluster execute the following commands:
+
+    kubectl port-forward --namespace coder svc/postgresql 5432:5432 &
+    PGPASSWORD="$POSTGRES_PASSWORD" psql --host 127.0.0.1 -U coder -d coder -p 5432
+
+WARNING: The configured password will be ignored on new installation in case when previous PostgreSQL release was deleted through the helm command. In that case, old PVC will have an old password, and setting it through helm won't take effect. Deleting persistent volumes (PVs) will solve the issue.
+WARNING: Rolling tag detected (bitnami/os-shell:latest), please note that it is strongly recommended to avoid using rolling tags in a production environment.
++info https://techdocs.broadcom.com/us/en/vmware-tanzu/application-catalog/tanzu-application-catalog/services/tac-doc/apps-tutorials-understand-rolling-tags-containers-index.html
+
+WARNING: There are "resources" sections in the chart not set. Using "resourcesPreset" is not recommended for production. For production installations, please set the following values according to your workload needs:
+  - primary.resources
+  - readReplicas.resources
++info https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
+
+⚠ SECURITY WARNING: Original containers have been substituted. This Helm chart was designed, tested, and validated on multiple platforms using a specific set of Bitnami and Tanzu Application Catalog containers. Substituting other containers is likely to cause degraded security and performance, broken chart features, and missing environment variables.
+
+Substituted images detected:
+  - registry-1.docker.io/bitnamilegacy/postgresql:latest
+
+⚠ WARNING: Original containers have been substituted for unrecognized ones. Deploying this chart with non-standard containers is likely to cause degraded security and performance, broken chart features, and missing environment variables.
+
+Unrecognized images:
+  - registry-1.docker.io/bitnamilegacy/postgresql:latest
+
+
+# DB-Connection-URL:
+postgres://coder:coder@postgresql.coder.svc.cluster.local:5432/coder?sslmode=disable
+
+# create secret:
+kubectl create secret generic coder-db-url -n coder --from-literal=url="postgres://coder:coder@postgresql.coder.svc.cluster.local:5432/coder?sslmode=disable"
+ secret/coder-db-url created
+
+# adapting value.yaml
+
+# deployment
+helm install coder coder-v2/coder \
+    --namespace coder \
+    --values values.yaml \
+    --version 2.28.6
+

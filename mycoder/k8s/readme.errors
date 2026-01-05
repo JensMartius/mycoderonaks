@@ -1,0 +1,9 @@
+
+Warning: Deprecated Resource
+on main.tf line 187, in resource "kubernetes_persistent_volume_claim" "workspaces":
+  187: resource "kubernetes_persistent_volume_claim" "workspaces" {
+Deprecated; use kubernetes_persistent_volume_claim_v1.
+
+Error: persistentvolumeclaims is forbidden: User "system:serviceaccount:coder:coder" cannot create resource "persistentvolumeclaims" in API group "" in the namespace "default"
+on main.tf line 187, in resource "kubernetes_persistent_volume_claim" "workspaces":
+  187: resource "kubernetes_persistent_volume_claim" "workspaces" {

@@ -1,0 +1,43 @@
+ az group create --name 015124-coder-gwc-dev-rg --location germanywestcentral
+ az aks create --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg --network-plugin azure --enable-managed-identity --generate-ssh-keys
+ az group delete --name 015124-coder-gwc-dev-rg
+ az group create --name 015124-coder-gwc-dev-rg --location eastus
+ az aks create --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg --network-plugin azure --enable-managed-identity --generate-ssh-keys
+ az group create --name 015124-coder-gwc-dev-rg --location eastus
+ az group delete --name 015124-coder-gwc-dev-rg
+ az group create --name 015124-coder-gwc-dev-rg --location eastus
+ az group delete --name 015124-coder-gwc-dev-rg
+ az group create --name 015124-coder-gwc-dev-rg --location germanywestcentral
+ az aks create --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg --location germanywestcentral --no-ssh-key --node-vm-size Standard_D2s_v3 --enable-managed-identity --generate-ssh-keys
+ az network public-ip create --name 015124-coder-gwc-dev-ip --resource-group 015124-coder-gwc-dev-rg --allocation-method Static --sku Standard
+ az network vnet create --name 015124-coder-gwc-dev-vnet --resource-group 015124-coder-gwc-dev-rg --address-prefix 10.0.0.0/16 --subnet-name 015124-coder-gwc-dev-subnet --subnet-prefix 10.0.0.0/24
+ az network application-gateway create --name myApplicationGateway --resource-group 015124-coder-gwc-dev-rg --sku Standard_v2 --public-ip-address 015124-coder-gwc-dev-ip --vnet-name 015124-coder-gwc-dev-vnet --subnet 015124-coder-gwc-dev-subnet --priority 100
+ az network application-gateway create --name 015124-coder-gwc-dev-appgw --resource-group 015124-coder-gwc-dev-rg --sku Standard_v2 --public-ip-address 015124-coder-gwc-dev-ip --vnet-name 015124-coder-gwc-dev-vnet --subnet 015124-coder-gwc-dev-subnet --priority 100
+ appgwId=$(az network application-gateway show --name 015124-coder-gwc-dev-appgw --resource-group 015124-coder-gwc-dev-rg -o tsv --query "id")
+ az aks enable-addons --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg --addon ingress-appgw --appgw-id $appgwId
+ az group delete --name 015124-coder-gwc-dev-rg
+ az group delete --name 015124-coder-gwc-dev-rg
+ az aks enable-addons --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg --addon ingress-appgw --appgw-id /subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.Network/applicationGateways/015124-coder-gwc-dev-appgw
+ az group delete --name MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral
+ az aks enable-addons --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg --addon kube-dashboard
+ az group delete --name MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral
+ az group create --name 015124-coder-gwc-dev-rg --location germanywestcentral
+ az aks create --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg --network-plugin azure --location germanywestcentral --node-vm-size Standard_D2s_v3 --enable-managed-identity --generate-ssh-keys
+ az network public-ip create --name 015124-coder-gwc-dev-ip --resource-group 015124-coder-gwc-dev-rg --allocation-method Static --sku Standard
+ az network vnet create --name 015124-coder-gwc-dev-vnet --resource-group 015124-coder-gwc-dev-rg --address-prefix 10.0.0.0/16 --subnet-name 015124-coder-gwc-dev-subnet --subnet-prefix 10.0.0.0/24
+ az network application-gateway create --name 015124-coder-gwc-dev-appgw --resource-group 015124-coder-gwc-dev-rg --sku Standard_v2 --public-ip-address 015124-coder-gwc-dev-ip --vnet-name 015124-coder-gwc-dev-vnet --subnet 015124-coder-gwc-dev-subnet --priority 100
+ appgwId=$(az network application-gateway show --name 015124-coder-gwc-dev-appgw --resource-group 015124-coder-gwc-dev-rg -o tsv --query "id")
+ az aks enable-addons --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg --addon ingress-appgw --appgw-id $appgwId
+ nodeResourceGroup=$(az aks show --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg -o tsv --query "nodeResourceGroup")
+ az network vnet peering create --name AppGWtoAKSVnetPeering --resource-group 015124-coder-gwc-dev-rg --vnet-name 015124-coder-gwc-dev-vnet --remote-vnet $aksVnetId --allow-vnet-access
+ appGWVnetId=$(az network vnet show --name 015124-coder-gwc-dev-vnet --resource-group 015124-coder-gwc-dev-rg -o tsv --query "id")
+ az aks get-credentials --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg
+ aztfexport resource-group 015124-coder-gwc-dev-rg
+ appgwId=$(az network application-gateway show --name 015124-coder-gwc-dev-appgw --resource-group 015124-coder-gwc-dev-rg -o tsv --query "id")
+ az aks enable-addons --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg --addon ingress-appgw --appgw-id $appgwId
+ az group delete --name MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral
+ az group delete --name 015124-coder-gwc-dev-rg
+ az group delete --name 015124-coder-gwc-dev-rg
+ az network application-gateway create --name 015124-coder-gwc-dev-appgw --resource-group 015124-coder-gwc-dev-rg --sku Standard_v2 --public-ip-address 015124-coder-gwc-dev-ip --vnet-name 015124-coder-gwc-dev-vnet --subnet 015124-coder-gwc-dev-subnet --priority 100
+ az group delete --name MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral
+ az group delete --name 015124-coder-gwc-dev-rg

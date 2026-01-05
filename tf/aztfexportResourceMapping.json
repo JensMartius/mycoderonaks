@@ -1,0 +1,42 @@
+{
+	"/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg": {
+		"resource_id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg",
+		"resource_type": "azurerm_resource_group",
+		"resource_name": "res-0"
+	},
+	"/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.ContainerService/managedClusters/015124-coder-gwc-dev-aks": {
+		"resource_id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.ContainerService/managedClusters/015124-coder-gwc-dev-aks",
+		"resource_type": "azurerm_kubernetes_cluster",
+		"resource_name": "res-1"
+	},
+	"/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.ContainerService/managedClusters/015124-coder-gwc-dev-aks/agentPools/nodepool1": {
+		"resource_id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.ContainerService/managedClusters/015124-coder-gwc-dev-aks/agentPools/nodepool1",
+		"resource_type": "azurerm_kubernetes_cluster_node_pool",
+		"resource_name": "res-2"
+	},
+	"/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.Network/applicationGateways/015124-coder-gwc-dev-appgw": {
+		"resource_id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.Network/applicationGateways/015124-coder-gwc-dev-appgw",
+		"resource_type": "azurerm_application_gateway",
+		"resource_name": "res-3"
+	},
+	"/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.Network/publicIPAddresses/015124-coder-gwc-dev-ip": {
+		"resource_id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.Network/publicIPAddresses/015124-coder-gwc-dev-ip",
+		"resource_type": "azurerm_public_ip",
+		"resource_name": "res-4"
+	},
+	"/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.Network/virtualNetworks/015124-coder-gwc-dev-vnet": {
+		"resource_id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.Network/virtualNetworks/015124-coder-gwc-dev-vnet",
+		"resource_type": "azurerm_virtual_network",
+		"resource_name": "res-5"
+	},
+	"/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.Network/virtualNetworks/015124-coder-gwc-dev-vnet/subnets/015124-coder-gwc-dev-subnet": {
+		"resource_id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.Network/virtualNetworks/015124-coder-gwc-dev-vnet/subnets/015124-coder-gwc-dev-subnet",
+		"resource_type": "azurerm_subnet",
+		"resource_name": "res-6"
+	},
+	"/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.Network/virtualNetworks/015124-coder-gwc-dev-vnet/virtualNetworkPeerings/AppGWtoAKSVnetPeering": {
+		"resource_id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/015124-coder-gwc-dev-rg/providers/Microsoft.Network/virtualNetworks/015124-coder-gwc-dev-vnet/virtualNetworkPeerings/AppGWtoAKSVnetPeering",
+		"resource_type": "azurerm_virtual_network_peering",
+		"resource_name": "res-7"
+	}
+}

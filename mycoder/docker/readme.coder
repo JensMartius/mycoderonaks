@@ -1,0 +1,12 @@
+
+mkdir /var/lib/pgsql
+coder server --postgres-url postgresql://postgres:mypgpasswd@192.168.2.28:5432/postgres?sslmode=disable
+
+docker run --name coder-postgres --restart=always -v /var/lib/pgsql:/var/lib/pgsql -e POSTGRES_PASSWORD=mypgpasswd  -e PGDATA=/var/lib/pgsql/data -p 5432:5432 -d postgres
+
+connectstring: postgresql://postgres:mypgpasswd@localhost:5432/postgres 
+systemctl enable --now coder
+
+
+coder server --postgres-url postgresql://postgres:mypgpasswd@localhost:5432/postgres?sslmode=disable --no-open --access-url http://192.168.2.28:3000
+
