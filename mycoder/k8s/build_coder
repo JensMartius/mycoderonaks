@@ -1,7 +1,8 @@
 #!/bin/bash
 
-export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+#export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
+az aks get-credentials --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg
 
 kubectl create namespace coder
 # Install PostgreSQL
@@ -21,11 +22,13 @@ kubectl create secret generic coder-db-url -n coder --from-literal=url="postgres
 # adapting value.yaml
 
 # deployment
+helm repo add coder-v2 https://helm.coder.com/v2
 helm install coder coder-v2/coder \
     --namespace coder \
     --values values.yaml \
     --version 2.29.1
 
-
 kubectl get svc -n coder
+
+kubectl get all -n coder
 

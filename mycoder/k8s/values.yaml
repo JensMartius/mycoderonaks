@@ -383,15 +383,15 @@ coder:
     loadBalancerClass: ""
     # coder.service.annotations -- The service annotations. See:
     # https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
-    annotations: {}
+    #annotations: {}
+    annotations: 
+      service.beta.kubernetes.io/azure-load-balancer-internal: "true" 
     # coder.service.httpNodePort -- Enabled if coder.service.type is set to
     # NodePort or LoadBalancer. If not set, Kubernetes will allocate a port from the default
     # range, 30000-32767.
-    httpNodePort: "30002"
     # coder.service.httpsNodePort -- Enabled if coder.service.type is set to
     # NodePort or LoadBalancer. If not set, Kubernetes will allocate a port from the default
     # range, 30000-32767.
-    httpsNodePort: "30002"
 
   # coder.ingress -- The Ingress object to expose for Coder.
   ingress:
