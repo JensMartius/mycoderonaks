@@ -1,0 +1,326 @@
+[
+  {
+    "backendAddressPools": [
+      {
+        "backendIPConfigurations": [
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/0/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+            "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          },
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/1/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+            "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          },
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/2/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+            "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          }
+        ],
+        "etag": "W/\"f60a06fb-fd8a-4702-93fe-fe081af1e1a5\"",
+        "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/aksOutboundBackendPool",
+        "loadBalancerBackendAddresses": [
+          {
+            "name": "73118b2a-9619-4a40-9005-2fa3774c25fd",
+            "networkInterfaceIPConfiguration": {
+              "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/0/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+              "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+            }
+          },
+          {
+            "name": "ccb0a176-3b24-46aa-9c0d-fed47424131c",
+            "networkInterfaceIPConfiguration": {
+              "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/1/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+              "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+            }
+          },
+          {
+            "name": "aba999a1-2d1a-4c7e-adfd-649c9dbb0f86",
+            "networkInterfaceIPConfiguration": {
+              "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/2/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+              "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+            }
+          }
+        ],
+        "name": "aksOutboundBackendPool",
+        "outboundRules": [
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes/outboundRules/aksOutboundRule",
+            "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          }
+        ],
+        "provisioningState": "Succeeded",
+        "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral",
+        "type": "Microsoft.Network/loadBalancers/backendAddressPools"
+      },
+      {
+        "backendIPConfigurations": [
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/0/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+            "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          },
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/1/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+            "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          },
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/2/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+            "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          }
+        ],
+        "etag": "W/\"f60a06fb-fd8a-4702-93fe-fe081af1e1a5\"",
+        "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/kubernetes",
+        "loadBalancerBackendAddresses": [
+          {
+            "name": "23d76078-cef5-4856-9941-be188467b3b9",
+            "networkInterfaceIPConfiguration": {
+              "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/0/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+              "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+            }
+          },
+          {
+            "name": "20c0c278-269b-42ba-90b9-69589f5c4558",
+            "networkInterfaceIPConfiguration": {
+              "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/1/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+              "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+            }
+          },
+          {
+            "name": "0999761e-3882-4580-aae9-0c453252de11",
+            "networkInterfaceIPConfiguration": {
+              "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/2/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+              "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+            }
+          }
+        ],
+        "name": "kubernetes",
+        "provisioningState": "Succeeded",
+        "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral",
+        "type": "Microsoft.Network/loadBalancers/backendAddressPools"
+      }
+    ],
+    "etag": "W/\"f60a06fb-fd8a-4702-93fe-fe081af1e1a5\"",
+    "frontendIPConfigurations": [
+      {
+        "etag": "W/\"f60a06fb-fd8a-4702-93fe-fe081af1e1a5\"",
+        "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes/frontendIPConfigurations/3052d7d5-32dc-49c3-9cf2-cd15a00f8e90",
+        "name": "3052d7d5-32dc-49c3-9cf2-cd15a00f8e90",
+        "outboundRules": [
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes/outboundRules/aksOutboundRule",
+            "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          }
+        ],
+        "privateIPAllocationMethod": "Dynamic",
+        "provisioningState": "Succeeded",
+        "publicIPAddress": {
+          "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/publicIPAddresses/3052d7d5-32dc-49c3-9cf2-cd15a00f8e90",
+          "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+        },
+        "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral",
+        "type": "Microsoft.Network/loadBalancers/frontendIPConfigurations"
+      }
+    ],
+    "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes",
+    "inboundNatPools": [],
+    "inboundNatRules": [],
+    "loadBalancingRules": [],
+    "location": "germanywestcentral",
+    "name": "kubernetes",
+    "outboundRules": [
+      {
+        "allocatedOutboundPorts": 0,
+        "backendAddressPool": {
+          "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/aksOutboundBackendPool",
+          "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+        },
+        "enableTcpReset": true,
+        "etag": "W/\"f60a06fb-fd8a-4702-93fe-fe081af1e1a5\"",
+        "frontendIPConfigurations": [
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes/frontendIPConfigurations/3052d7d5-32dc-49c3-9cf2-cd15a00f8e90",
+            "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          }
+        ],
+        "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes/outboundRules/aksOutboundRule",
+        "idleTimeoutInMinutes": 30,
+        "name": "aksOutboundRule",
+        "protocol": "All",
+        "provisioningState": "Succeeded",
+        "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral",
+        "type": "Microsoft.Network/loadBalancers/outboundRules"
+      }
+    ],
+    "probes": [],
+    "provisioningState": "Succeeded",
+    "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral",
+    "resourceGuid": "7c7623f2-d0ae-4a77-9a66-a7b4fbc9eb3e",
+    "sku": {
+      "name": "Standard",
+      "tier": "Regional"
+    },
+    "tags": {
+      "aks-managed-cluster-name": "015124-coder-gwc-dev-aks",
+      "aks-managed-cluster-rg": "015124-coder-gwc-dev-rg"
+    },
+    "type": "Microsoft.Network/loadBalancers"
+  },
+  {
+    "backendAddressPools": [
+      {
+        "backendIPConfigurations": [
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/1/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+            "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          },
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/0/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+            "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          },
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/2/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+            "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          }
+        ],
+        "etag": "W/\"98f1a6f1-f265-4956-a5cb-ab111c1b1574\"",
+        "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes-internal/backendAddressPools/kubernetes",
+        "loadBalancerBackendAddresses": [
+          {
+            "name": "57ee87c1-2c8c-4d17-8139-09f8d2206dd8",
+            "networkInterfaceIPConfiguration": {
+              "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/1/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+              "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+            }
+          },
+          {
+            "name": "c44e3a49-2939-4add-9e66-a091df4a3208",
+            "networkInterfaceIPConfiguration": {
+              "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/0/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+              "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+            }
+          },
+          {
+            "name": "c26101fa-3794-4338-b1a8-297266417328",
+            "networkInterfaceIPConfiguration": {
+              "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-17965030-vmss/virtualMachines/2/networkInterfaces/aks-nodepool1-17965030-vmss/ipConfigurations/ipconfig1",
+              "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+            }
+          }
+        ],
+        "loadBalancingRules": [
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes-internal/loadBalancingRules/af56ca7298cde4cfea36817a99db6954-TCP-80",
+            "resourceGroup": "mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          }
+        ],
+        "name": "kubernetes",
+        "provisioningState": "Succeeded",
+        "resourceGroup": "mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral",
+        "type": "Microsoft.Network/loadBalancers/backendAddressPools"
+      }
+    ],
+    "etag": "W/\"98f1a6f1-f265-4956-a5cb-ab111c1b1574\"",
+    "frontendIPConfigurations": [
+      {
+        "etag": "W/\"98f1a6f1-f265-4956-a5cb-ab111c1b1574\"",
+        "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes-internal/frontendIPConfigurations/af56ca7298cde4cfea36817a99db6954",
+        "loadBalancingRules": [
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes-internal/loadBalancingRules/af56ca7298cde4cfea36817a99db6954-TCP-80",
+            "resourceGroup": "mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          }
+        ],
+        "name": "af56ca7298cde4cfea36817a99db6954",
+        "privateIPAddress": "10.224.0.91",
+        "privateIPAddressVersion": "IPv4",
+        "privateIPAllocationMethod": "Dynamic",
+        "provisioningState": "Succeeded",
+        "resourceGroup": "mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral",
+        "subnet": {
+          "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/virtualNetworks/aks-vnet-14029748/subnets/aks-subnet",
+          "resourceGroup": "MC_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+        },
+        "type": "Microsoft.Network/loadBalancers/frontendIPConfigurations",
+        "zones": [
+          "1",
+          "2",
+          "3"
+        ]
+      }
+    ],
+    "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes-internal",
+    "inboundNatPools": [],
+    "inboundNatRules": [],
+    "loadBalancingRules": [
+      {
+        "backendAddressPool": {
+          "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes-internal/backendAddressPools/kubernetes",
+          "resourceGroup": "mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+        },
+        "backendAddressPools": [
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes-internal/backendAddressPools/kubernetes",
+            "resourceGroup": "mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          }
+        ],
+        "backendPort": 80,
+        "disableOutboundSnat": true,
+        "enableFloatingIP": true,
+        "enableTcpReset": true,
+        "etag": "W/\"98f1a6f1-f265-4956-a5cb-ab111c1b1574\"",
+        "frontendIPConfiguration": {
+          "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes-internal/frontendIPConfigurations/af56ca7298cde4cfea36817a99db6954",
+          "resourceGroup": "mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+        },
+        "frontendPort": 80,
+        "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes-internal/loadBalancingRules/af56ca7298cde4cfea36817a99db6954-TCP-80",
+        "idleTimeoutInMinutes": 4,
+        "loadDistribution": "Default",
+        "name": "af56ca7298cde4cfea36817a99db6954-TCP-80",
+        "probe": {
+          "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes-internal/probes/af56ca7298cde4cfea36817a99db6954-TCP-80",
+          "resourceGroup": "mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+        },
+        "protocol": "Tcp",
+        "provisioningState": "Succeeded",
+        "resourceGroup": "mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral",
+        "type": "Microsoft.Network/loadBalancers/loadBalancingRules"
+      }
+    ],
+    "location": "germanywestcentral",
+    "name": "kubernetes-internal",
+    "outboundRules": [],
+    "probes": [
+      {
+        "etag": "W/\"98f1a6f1-f265-4956-a5cb-ab111c1b1574\"",
+        "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes-internal/probes/af56ca7298cde4cfea36817a99db6954-TCP-80",
+        "intervalInSeconds": 5,
+        "loadBalancingRules": [
+          {
+            "id": "/subscriptions/6f81ef09-202c-4e6b-9f7c-1fff436c0fbf/resourceGroups/mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral/providers/Microsoft.Network/loadBalancers/kubernetes-internal/loadBalancingRules/af56ca7298cde4cfea36817a99db6954-TCP-80",
+            "resourceGroup": "mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral"
+          }
+        ],
+        "name": "af56ca7298cde4cfea36817a99db6954-TCP-80",
+        "numberOfProbes": 2,
+        "port": 32046,
+        "probeThreshold": 2,
+        "protocol": "Tcp",
+        "provisioningState": "Succeeded",
+        "resourceGroup": "mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral",
+        "type": "Microsoft.Network/loadBalancers/probes"
+      }
+    ],
+    "provisioningState": "Succeeded",
+    "resourceGroup": "mc_015124-coder-gwc-dev-rg_015124-coder-gwc-dev-aks_germanywestcentral",
+    "resourceGuid": "14ebe949-44a7-4c9d-a305-d3115fc1b811",
+    "sku": {
+      "name": "Standard",
+      "tier": "Regional"
+    },
+    "tags": {
+      "aks-managed-cluster-name": "015124-coder-gwc-dev-aks",
+      "aks-managed-cluster-rg": "015124-coder-gwc-dev-rg"
+    },
+    "type": "Microsoft.Network/loadBalancers"
+  }
+]

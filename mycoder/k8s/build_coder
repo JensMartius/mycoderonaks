@@ -3,6 +3,8 @@
 #export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
 az aks get-credentials --name 015124-coder-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg
+az aks get-credentials --name 015124-codertls-gwc-dev-aks --resource-group 015124-coder-gwc-dev-rg
+
 
 kubectl create namespace coder
 # Install PostgreSQL
@@ -32,3 +34,6 @@ kubectl get svc -n coder
 
 kubectl get all -n coder
 
+# TLS
+kubectl create secret tls coder-tls -n coder --key="privkey.pem" --cert="fullchain.pem"
+helm install coder coder-v2/coder     --namespace coder     --values values-tls.yaml    --version 2.29.1
